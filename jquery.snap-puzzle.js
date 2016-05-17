@@ -89,7 +89,7 @@
                         left: Math.floor((Math.random()*(maxX+1))),
                         top: Math.floor((Math.random()*(maxY+1))),
                         zIndex: Math.floor((Math.random()*10)+1),
-                        backgroundImage: 'url('+src+')',
+                        backgroundImage: 'url("'+src+'")',
                         backgroundPosition: (-y*pieceWidth)+'px '+(-x*pieceHeight)+'px',
                         backgroundSize: that.width()
                     }).draggable({
@@ -129,6 +129,7 @@
                     });
                 }
             }
+            $('body').trigger('snap-puzzle-created');
         }
 
         return this.each(function(){
