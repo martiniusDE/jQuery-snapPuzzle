@@ -129,7 +129,6 @@
                     });
                 }
             }
-            $('body').trigger('snap-puzzle-created');
         }
 
         return this.each(function(){
